@@ -1,0 +1,106 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+
+#--------------------------------------------------------------------------------------------
+# Server Parameters
+#--------------------------------------------------------------------------------------------
+# Server.IP: "10.240.68.185"
+Server.IP: "127.0.0.1"
+Server.Port: 6666
+
+# Camera calibration and distortion parameters (OpenCV) 
+Camera.fx: 387.979806
+Camera.fy: 290.51393343
+Camera.cx: 238.98228
+Camera.cy: 143.6141188
+
+Camera.k1: 0.262383
+Camera.k2: -0.953104
+Camera.p1: -0.005358
+Camera.p2: 0.002628
+Camera.k3: 1.163314
+
+Camera.width: 480
+Camera.height: 270
+
+Camera.net_width: 240
+Camera.net_height: 160
+# Camera.net_width: 304
+# Camera.net_height: 228
+Camera.Save_Image: 0
+Camera.cv_wait_delay: 40
+Camera.depth_grad_thr: 0.3
+Camera.focal_scale: 1.0
+
+# Camera frames per second 
+Camera.fps: 10.0
+
+# stereo baseline times fx
+Camera.bf: 40.00
+# Camera.bf: 42.14808
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+# Close/Far threshold. Baseline times.
+ThDepth: 67.0
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 600
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.6
+Viewer.KeyFrameLineWidth: 2
+Viewer.GraphLineWidth: 1
+Viewer.PointSize:3.5
+Viewer.CameraSize: 0.7
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -50.0
+Viewer.ViewpointZ: -0.1
+Viewer.ViewpointF: 2000
+
+Viewer.ViewpointX_DenseMap: 0.0
+Viewer.ViewpointY_DenseMap: 0.0
+Viewer.ViewpointZ_DenseMap: -20.0
+Viewer.ViewpointF_DenseMap: 2000
+
+#---------------------------------------------------------------------------------------------
+# dense map params
+# maxdepth: 4.5*1.4933
+#---------------------------------------------------------------------------------------------
+DenseMap.PointDistThr:0.05
+DenseMap.PointStableThr: 0.06
+DenseMap.StableDelayLoopThr: 0.005
+DenseMap.PointInitUncertainty: 0.8
+DenseMap.MaxUncertaintyLimit: 1
+DenseMap.MaxFusionWeight: 1000
+DenseMap.LabelFusionThr: 255
+DenseMap.MaxDepth: 5
+DenseMap.MinDepth: 0.1
+DenseMap.CovisibleForKeyFrames: 3
+DenseMap.CovisibleForFrames: 3
+DenseMap.UncertaintyWeight: 0.2
+

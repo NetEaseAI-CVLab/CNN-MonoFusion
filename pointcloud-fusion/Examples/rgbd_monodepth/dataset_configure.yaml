@@ -1,0 +1,30 @@
+%YAML:1.0
+
+
+#--------------------------------------------------------------------------------------------
+# tum adenet finetune pred Dataset Configure
+#--------------------------------------------------------------------------------------------
+DatasetConf.camera_params_yaml: "../Examples/rgbd_monodepth/tum1_adenet_pred_viewpoint.yaml"
+DatasetConf.voc_path: "../Examples/Monocular/ORBvoc/ORBvoc.bin"
+
+# pose save in pose_save_dir+sequences
+DatasetConf.pose_save_dir: "../dataset/orbslam_pose/"
+DatasetConf.sequences: "rgbd_dataset_freiburg1_rpy/rgb_resize/"
+DatasetConf.rgb_dir: "../dataset/rgbd_dataset_freiburg1_rpy/rgb_resize/"
+DatasetConf.depth_dir: "../dataset/rgbd_dataset_freiburg1_rpy/rgb_resize/"
+DatasetConf.label_dir: "../dataset/rgbd_dataset_freiburg1_rpy/rgb_resize/"
+
+DatasetConf.rgb_extend_name: "_color.png"
+DatasetConf.label_extend_name: "_label.png"
+DatasetConf.depth_extend_name: "_adenet_depth_pred.png"
+
+DatasetConf.image_name_zfill: 5
+DatasetConf.depth_factor: 0.00011393148
+# DatasetConf.depth_factor: 0.000111
+# DatasetConf.depth_factor:  0.00007629511
+DatasetConf.image_begin: 5
+DatasetConf.image_end: 1000
+DatasetConf.densemap_skip_frames: 5
+
+DatasetConf.USE_DATASET_IMAGE: 1
+DatasetConf.USE_DATASET_DEPTH: 0
